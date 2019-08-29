@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="chat/css/chat.min.css"/>
+		<script src="chat/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+	</style>
+	<body>
+		<!-- 悬浮在右边的聊天logo图标 可自定义  类名不修改 -->
+		<div id="chatlogo">
+			<span class="iconfont" >&#xe614;</span>
+		</div>
+		<!--提供的添加好友的按钮操作    class不可修改  user_id 添加的好友uUID -->
+		<button class="chat_add_friend" user_id='204b6a6d-4773-44c3-8f42-bfef015977db'>加好友</button>
+		<script src="chat/js/chat.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript"> 
+			var chat = new Chat({
+				//用户需要提供一个接口 来提供已登录的用户信息  以及在wachat上申请的一个websign网站标识
+				//UUID一个唯一标识 需要参数 uUID username  usercode  
+				url:"http://zouhongwei.com:8800/WAChat/user/login.action",
+				//资源路径  chat文件夹放置的位置
+				sourcepath:''
+			});
+		</script>
+	</body>
+</html>
