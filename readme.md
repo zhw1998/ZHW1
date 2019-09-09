@@ -83,7 +83,20 @@
    		 response.getWriter().write(json);
    	}
    ```
-
+   ```
+   @RequestMapping(value = "/loginchat.action",method = RequestMethod.GET)
+    @ResponseBody
+    public  String loginchat(HttpServletRequest request){
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+        Map<String,String>  map = new HashMap<>();
+        map.put("uUID",user.getUuid());
+        map.put("username",user.getUsername());
+        map.put("usercode",user.getMail());
+        map.put("websign","89bb4497-8f45-4c14-9851-9bbe3257c4c7");
+        return JSON.toJSONString(map);
+    }
+   ```
    php 
 
    ```
