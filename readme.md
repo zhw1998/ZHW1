@@ -93,7 +93,7 @@
         map.put("uUID",user.getUuid());
         map.put("username",user.getUsername());
         map.put("usercode",user.getMail());
-        map.put("websign","89bb4497-8f45-4c14-9851-9bbe3257c4c7");
+        map.put("websign",websign);
         return JSON.toJSONString(map);
     }
    ```
